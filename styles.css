@@ -1,3 +1,107 @@
-/* Mike Jenkins */
-/* 07 MAY 20XX */
+/* Lucas Brinks */
+/* 07 May 2024 */
 /* Web Design Challenge */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.wrap {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr auto;
+    gap: 5px;
+    padding: 10px;
+    grid-template-areas: 
+    "h h h"
+    "c1 c1 c2"
+    "c1 c1 c3"
+    "f f f";
+}
+header {
+    grid-area: h;
+    background-image: url(header-bg.jpg);
+    color: aliceblue;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border: 5px solid black;
+}
+.c1 {
+    grid-area: c1;
+    background-color: aquamarine;
+    border: 5px solid black;
+}
+.c2 {
+    grid-area: c2;
+    border: 5px solid black;
+    background-color: maroon;
+}
+.c3 {
+    grid-area: c3;
+    border: 5px solid black;
+    background-color: silver;
+}
+footer {
+    grid-area: f;
+    border: 5px solid black;
+    background-color: purple;
+}
+img {
+    max-width: 100%;
+}
+
+.list-shift {
+    margin-left: 30px;
+}
+@media (width<750px) {
+    .wrap {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr 1fr 1fr auto;
+        gap: 5px;
+        padding: 10px;
+        grid-template-areas: 
+        "h"
+        "c1"
+        "c2"
+        "c3"
+        "f";
+    }
+    header {
+        grid-area: h;
+        background-image: url(header-bg.jpg);
+        color: aliceblue;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        border: 5px solid black;
+    }
+    .c1 {
+        grid-area: c1;
+        background-color: aquamarine;
+        border: 5px solid black;
+    }
+    .c2 {
+        grid-area: c2;
+        border: 5px solid black;
+        background-color: maroon;
+    }
+    .c3 {
+        grid-area: c3;
+        border: 5px solid black;
+        background-color: silver;
+    }
+    footer {
+        grid-area: f;
+        border: 5px solid black;
+        background-color: purple;
+    }
+    img {
+        max-width: 100%;
+    }
+    
+    .list-shift {
+        margin-left: 30px;
+    }
+}
